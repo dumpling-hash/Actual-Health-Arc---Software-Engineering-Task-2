@@ -60,13 +60,13 @@
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
-        "*.unity": "yaml",
+        "*.unity": "yaml"
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Health Arc Software Engineering Asessment.slnx",
+    "dotnet.defaultSolution": "Actual-Health-Arc---Software-Engineering-Task-2.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
