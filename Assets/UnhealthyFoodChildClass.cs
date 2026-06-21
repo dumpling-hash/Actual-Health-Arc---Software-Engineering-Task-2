@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class UnhealthyFoodChildClass : ParentClassFood
 {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player1"))
+        {
+            Eat();
+        }
+    }
     public override void Eat()
     {
         HealthImpact = -10;
