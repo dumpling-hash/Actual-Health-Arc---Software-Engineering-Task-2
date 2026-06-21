@@ -12,4 +12,3 @@ public class UnhealthyFoodChildClass : ParentClassFood
         base.Eat();
     }
 }
-a
