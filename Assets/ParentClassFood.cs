@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ParentClassFood
+public class ParentClassFood : MonoBehaviour
 {
     public string Name { get; set; }
     public int HealthImpact { get; set; }
