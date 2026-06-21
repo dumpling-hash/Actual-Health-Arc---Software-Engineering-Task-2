@@ -1,13 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 /* Child class inheriting behaviour from GameCharacter (parent class)
 ------- Player 1 ---------*/
 public class Player1 :GameCharacter
 {
+    // Linking each UI slider to the script
+    public Slider healthslider; 
+    public Slider happinessslider; 
+    public Slider weightslider; 
 protected virtual void Start()
 {
     // Set the character name - inheriting CharacterName from parent class and changes in player(child) class
-    characterName = "Player 1";a
+    characterName = "Player 1";
   
     // Display starting health
     Debug.Log(characterName + " Health: " + health);
@@ -17,6 +22,13 @@ protected override void Update()
 {
     // Runs parent movement and jumping
     base.Update();
+    // Update UI sliders
+    if (healthslider != null)
+        healthslider.value = health;
+    if (happinessslider != null)
+        happinessslider.value = happiness;
+    if (weightslider != null)
+        weightslider.value = weight;
 
     // Player Attack
     if (Input.GetKeyDown(KeyCode.F))

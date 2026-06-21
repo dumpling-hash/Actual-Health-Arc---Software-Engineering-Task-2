@@ -11,6 +11,8 @@ public class GameCharacter : MonoBehaviour
 //Variable List
 public string characterName= "test";
 public int health = 100; // Player's current health
+public int happiness = 100; // Player's current happiness
+public int weight = 50; // Player's current weight
 public float speed = 5f; // How fast the player moves
 public bool isJumping = false; // Tracks if the player is currently jumping
 // Jump settings (simple non‑physics jump)
