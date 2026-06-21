@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class UnhealthyFoodChildClass : ParentClassFood
 {
-    public int healthImpact = -10;
-    public int happinessImpact = 15;
-    public int calories = 10;
-
-    public void EatUnhealthyFood()
+    public override void Eat()
     {
-        Debug.Log($"You eat unhealthy food, your health is now {healthImpact}, your happiness is {happinessImpact}, and you ate {calories} calories of food.");
+        HealthImpact = -10;
+        HappinessImpact = 15;
+        Calories = 10;
+
+        Debug.Log($"You eat unhealthy food, your health is now {HealthImpact}, your happiness is {HappinessImpact}, and you ate {Calories} calories of food.");
+        base.Eat();
     }
 }
