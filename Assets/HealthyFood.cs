@@ -4,7 +4,7 @@ public class HealthyFood : ParentClassFood
 {
     void Start()
     {
-        Name = "Sushi";
+        Name = "HealthyFood";
         HealthImpact = 10;
         Calories = -10;
         HappinessImpact = -10;
