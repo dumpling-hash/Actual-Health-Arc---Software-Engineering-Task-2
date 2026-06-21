@@ -4,7 +4,7 @@ public class MediumFood : ParentClassFood
 {
     void Start()
     {
-        Name = "Ramen";
+        Name = "MediumFood";
         HealthImpact = 5;
         Calories = 0;
         HappinessImpact = 5;
