@@ -4,7 +4,7 @@ public class UnhealthyFoodChildClass : ParentClassFood
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player1"))
+        if (other.CompareTag("Player"))
         {
             Eat();
         }
@@ -19,3 +19,4 @@ public class UnhealthyFoodChildClass : ParentClassFood
         base.Eat();
     }
 }
+
