@@ -20,6 +20,10 @@ protected virtual void Start()
 
 protected override void Update()
 {
+    if (health >= 100 && happiness >=100 && weight <=50)
+    {
+        Debug.Log("You have completed the game, good job!");
+    }
     // Runs parent movement and jumping
     base.Update();
     // Update UI sliders
