@@ -13,9 +13,9 @@ public class UnhealthyFoodChildClass : ParentClassFood
     {
         HealthImpact = -10;
         HappinessImpact = 15;
-        Calories = 10;
+        WeightImpact = 10;
 
-        Debug.Log($"You eat unhealthy food, your health is now {HealthImpact}, your happiness is {HappinessImpact}, and you ate {Calories} calories of food.");
+        Debug.Log($"You eat unhealthy food, your health is now {HealthImpact}, your happiness is {HappinessImpact}, and you gained {WeightImpact} weight.");
         base.Eat();
     }
 }
