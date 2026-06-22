@@ -9,6 +9,8 @@ public class Player1 :GameCharacter
     public Slider healthslider; 
     public Slider happinessslider; 
     public Slider weightslider; 
+    public GameObject winScreen; // Game object for win screen UI
+    public GameObject loseScreen; // Game object for lose screen UI
 protected virtual void Start()
 {
     // Set the character name - inheriting CharacterName from parent class and changes in player(child) class
@@ -22,7 +24,7 @@ protected override void Update()
 {
     if (health >= 100 && happiness >=100 && weight <=50)
     {
-        Debug.Log("You have completed the game, good job!");
+        WinGame();
     }
     // Runs parent movement and jumping
     base.Update();
@@ -59,9 +61,27 @@ public override void TakeDamage(int damage)
             // Check if player is dead
             if (health <= 0)
             {
-                Debug.Log("Game Over");
+                LoseGame();
             }
     }
+
+    void LoseGame()
+    {
+        Time.timeScale = 0f; // Pause the game
+        if (loseScreen != null)
+        {
+            loseScreen.SetActive(true); // Show lose screen
+        }
+    }
+    void WinGame()
+    {
+        Time.timeScale = 0f; // Pause the game
+        if (winScreen != null)
+        {
+            winScreen.SetActive(true); // Show win screen
+        }
+    }
+
 }
 
 
