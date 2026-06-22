@@ -6,7 +6,7 @@ public class HealthyFood : ParentClassFood
     {
         Name = "HealthyFood";
         HealthImpact = 10;
-        Calories = -10;
+        WeightImpact = -10;
         HappinessImpact = -10;
     }
     
@@ -19,7 +19,7 @@ public class HealthyFood : ParentClassFood
             if (player != null) // If the player component is found, apply the health, weight, and happiness impacts
             {
                 player.health += HealthImpact;
-                player.weight += Calories;
+                player.weight += WeightImpact;
                 player.happiness += HappinessImpact;
             }
             Eat();
