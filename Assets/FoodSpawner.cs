@@ -17,7 +17,8 @@ public class FoodSpawner : MonoBehaviour
             {
 
             int randomNum = Random.Range(0, foodPrefabs.Length); // Picks random food
-            currentFood = Instantiate(foodPrefabs[randomNum], transform.position, transform.rotation); // Spawn new random food and saves it to the current food  as shown in line 7
+            currentFood = Instantiate(foodPrefabs[randomNum]); // Spawn the food and save it to currentFood
+            currentFood.transform.position = transform.position; // Move that food exactly to the spawner's spot
             timer = 0f; // Reset the timer
         }
     }
