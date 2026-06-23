@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class UnhealthyFoodChildClass : ParentClassFood
 {
+        void Start()
+        {
+            Name = "UnhealthyFood";
+            HealthImpact = -10;
+            WeightImpact = 10;
+            HappinessImpact = 15;
+        }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
