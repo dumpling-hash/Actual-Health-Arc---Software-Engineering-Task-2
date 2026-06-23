@@ -22,6 +22,10 @@ protected virtual void Start()
 
 protected override void Update()
 {
+    health = Mathf.Clamp(health, 0, 100); // Ensure health stays between 0 and 100
+    happiness = Mathf.Clamp(happiness, 0, 100); // Ensure happiness stays between 0 and 100
+    weight = Mathf.Clamp(weight, 0, 100); // Ensure weight stays between 0 and 100
+
     if (health >= 100 && happiness >=100 && weight <=50)
     {
         WinGame();
