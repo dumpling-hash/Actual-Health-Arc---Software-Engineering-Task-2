@@ -63,7 +63,7 @@ public override void TakeDamage(int damage)
             Debug.Log("Player health decreased: " + health);
   
             // Check if player is dead
-            if (health <= 0)
+            if (health <= 0 && happiness <= 0 && weight >= 100 && weight <=0)
             {
                 LoseGame();
             }
@@ -86,7 +86,9 @@ public override void TakeDamage(int damage)
         }
     }
 
+
 }
+
 
 
 
