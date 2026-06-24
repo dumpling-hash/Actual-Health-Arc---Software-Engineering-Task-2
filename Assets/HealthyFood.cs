@@ -4,10 +4,10 @@ public class HealthyFood : ParentClassFood
 {
     void Start()
     {
-        Name = "HealthyFood";
-        HealthImpact = 10;
-        WeightImpact = -10;
-        HappinessImpact = -10;
+        Name = "HealthyFood"; // Name of the child class (category of food)
+        HealthImpact = 10; // The amount of effect the food has on health bar
+        WeightImpact = -10; // The amount of effect the food has on weight bar
+        HappinessImpact = -10; // The amount of effect the food has on happiness bar
     }
     
     private void OnTriggerEnter2D(Collider2D collision) // When 2d objects collides with the food object, it will check if object is the player and apply effects
@@ -18,9 +18,9 @@ public class HealthyFood : ParentClassFood
 
             if (player != null) // If the player component is found, apply the health, weight, and happiness impacts
             {
-                player.health += HealthImpact;
-                player.weight += WeightImpact;
-                player.happiness += HappinessImpact;
+                player.health += HealthImpact; // Impacts player's health by this child class value
+                player.weight += WeightImpact; // Impacts player's weight by this child class value
+                player.happiness += HappinessImpact; // Impacts player's happiness by this child class value
             }
             Eat();
         }
