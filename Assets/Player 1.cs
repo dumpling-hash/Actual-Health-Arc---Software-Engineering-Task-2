@@ -19,7 +19,6 @@ protected virtual void Start()
     // Display starting health
     Debug.Log(characterName + " Health: " + health);
 }
-
 protected override void Update()
 {
     health = Mathf.Clamp(health, 0, 100); // Ensure health stays between 0 and 100
@@ -30,6 +29,10 @@ protected override void Update()
     {
         WinGame();
     }
+    if (health <= 0 || happiness <= 0 || weight >= 100 || weight <=0)
+            {
+                LoseGame();
+            }
     // Runs parent movement and jumping
     base.Update();
     // Update UI sliders
@@ -63,10 +66,7 @@ public override void TakeDamage(int damage)
             Debug.Log("Player health decreased: " + health);
   
             // Check if player is dead
-            if (health <= 0 && happiness <= 0 && weight >= 100 && weight <=0)
-            {
-                LoseGame();
-            }
+            
     }
 
     void LoseGame()
